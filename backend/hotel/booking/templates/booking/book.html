@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+    <form action="" method="post">{% csrf_token %}
+        <table>
+            <tr>
+                <td>Customer Name </td>
+                <td><input type="text" name="name" id=""></td>
+            </tr>
+            <tr>
+                <td>Room Number </td>
+                <td>
+                    <select name="roomnumber" id="">
+                        {% for room in rooms %}
+                        {% if room.is_available %}
+                        <option value="{{room.room_no}}">{{room.room_no}}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Amount </td>
+                <td><input type="text" name="amount" id="" value=""></td>
+            </tr>
+            <tr>
+                <td>CheckIn Date </td>
+                <td><input type="date"  name="checkin" id=""></td>
+            </tr>
+            <tr>
+                <td>Checkout Date </td>
+                <td><input type="date" name="checkout" id=""></td>
+            </tr>
+        </table>
+        <input type="submit" name="" id="">
+    </form>
+    
+    
+</body>
+</html>
