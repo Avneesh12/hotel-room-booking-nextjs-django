@@ -1,0 +1,9 @@
+.navfont{
+    color: white !important;
+    font-size: 20px;
+  }
+
+
+  .navfont:hover{
+    text-decoration: underline;
+  }
